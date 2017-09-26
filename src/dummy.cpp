@@ -31,7 +31,7 @@ double myvconstraint(const std::vector<double> &x, std::vector<double> &grad, vo
 }
 
 // [[Rcpp::export]]
-double test2()
+double test()
 {
     nlopt::opt opt(nlopt::LD_MMA, 2);
     std::vector<double> lb(2);
@@ -51,23 +51,4 @@ double test2()
     nlopt::result result = opt.optimize(x, minf);
     Rcpp::Rcout << int(result) << "\n";
     return minf;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-// [[Rcpp::export]]
-int test(int a) 
-{
-    return a++;
-    return a++;
 }

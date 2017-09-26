@@ -5,33 +5,23 @@
 
 using namespace Rcpp;
 
-// test2
-double test2();
-RcppExport SEXP _nloptr_test2() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(test2());
-    return rcpp_result_gen;
-END_RCPP
-}
 // test
-int test(int a);
-RcppExport SEXP _nloptr_test(SEXP aSEXP) {
+double test();
+RcppExport SEXP _nloptr_test() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type a(aSEXP);
-    rcpp_result_gen = Rcpp::wrap(test(a));
+    rcpp_result_gen = Rcpp::wrap(test());
     return rcpp_result_gen;
 END_RCPP
 }
 
+RcppExport SEXP _nloptr_test2();
 RcppExport SEXP NLoptR_Optimize(SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_nloptr_test2", (DL_FUNC) &_nloptr_test2, 0},
-    {"_nloptr_test", (DL_FUNC) &_nloptr_test, 1},
+    {"_nloptr_test", (DL_FUNC) &_nloptr_test, 0},
+    {"_nloptr_test2",   (DL_FUNC) &_nloptr_test2,   0},
     {"NLoptR_Optimize", (DL_FUNC) &NLoptR_Optimize, 1},
     {NULL, NULL, 0}
 };
