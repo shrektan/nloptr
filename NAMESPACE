@@ -1,5 +1,7 @@
 ### NAMESPACE
 
+importFrom(Rcpp,sourceCpp)
+
 useDynLib(nloptr, NLoptR_Optimize)
 
 ## Public routines

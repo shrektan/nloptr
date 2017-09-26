@@ -24,3 +24,5 @@ Suggests: testthat (>= 0.8.1),
 LazyLoad: yes
 NeedsCompilation: yes
 VignetteBuilder: knitr
+LinkingTo: Rcpp
+Imports: Rcpp

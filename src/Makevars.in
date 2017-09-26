@@ -4,7 +4,8 @@
 ## If it is not found, it is downloaded and installed from source -- but such
 ## a build scheme is not permitted within Debian, or on Launchpad, or ... so
 ## the preference is use a supplied version of NLopt
-
+CXX_STD = CXX11
+PKG_CXXFLAGS = @PKG_CFLAGS@
 PKG_CFLAGS=@PKG_CFLAGS@
 PKG_LIBS=@PKG_LIBS@
 
